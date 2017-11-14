@@ -1,10 +1,2 @@
-import React from 'react';
-
-const Photo = () => (
-  <div>
-    This is the photo page
-    
-  </div>
-);
-
-export default Photo;
+export { default as PhotoPageContainer } from './container';
+export { default as PhotoPage } from './component';
