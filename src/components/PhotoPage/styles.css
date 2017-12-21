@@ -16,3 +16,12 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.Photodetail-location {
+  text-align: right;
+}
+
+.Photodetail-link {
+  font-weight: bold;
+  font-size: 0.8rem;
+}

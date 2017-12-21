@@ -12,7 +12,12 @@ const PhotoDetail = ({ images }) => (
       )}
       <div className="PhotoDetail-about">
         <div><h1>NYE 2018</h1></div>
-        <div>Ealing, London 31/12/2017</div>
+        <div className="Photodetail-location">
+          <div className="Photodetail-link">
+            View the gif at http://something.co/hash
+          </div>
+          <div>Ealing, London 31/12/2017</div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,6 +1,7 @@
 const Photos = [
   {
     id: 1,
+    completed: true,
     images: [
       {
         pose: 'Waving',

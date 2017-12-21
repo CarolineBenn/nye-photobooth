@@ -18,8 +18,12 @@ class PhotoPageContainer extends Component {
   }
 
   render() {
+    const { photoset } = this.state;
     return (
-      <PhotoPage {...this.state.photoset} />
+      <div>
+        {photoset.completed &&
+          <PhotoPage {...photoset} />}
+      </div>
     );
   }
 }
