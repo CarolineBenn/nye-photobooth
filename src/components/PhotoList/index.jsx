@@ -8,21 +8,28 @@ class PhotoList extends Component {
   constructor() {
     super();
     this.state = {
-      selectedPhoto: undefined,
+      photoset: undefined,
     }
   }
 
   componentDidMount() {
-    this.startDisplay();
+    this.startPoll();
   }
 
-  startDisplay() {
-    let photoset = Photos[Math.floor(Math.random() * Photos.length)];
-    this.setState({ photoset: photoset })
+  startPoll() {
+    setInterval(() => this.selectPhoto(), 2000);
+  }
+
+
+  selectPhoto() {
+    this.setState({
+      photoset: Photos[Math.floor(Math.random() * Photos.length)],
+    });
   }
 
   render() {
     const { photoset } = this.state;
+
     return (
       <div>
       {photoset &&
