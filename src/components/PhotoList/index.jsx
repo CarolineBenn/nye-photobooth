@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { Compoent } from 'react';
 
-const PhotoList = () => (
-  <div>Photolist</div>
-);
+class PhotoList extends Component {
+  render() {
+    return (
+      <div></div>
+    );
+  }
+}
 
 export default PhotoList;

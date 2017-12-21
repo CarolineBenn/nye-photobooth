@@ -6,14 +6,15 @@ import { PhotoPage } from '.';
 
 class PhotoPageContainer extends Component {
   componentWillMount() {
-    // Fetch photo:
     this.fetchData();
   }
 
   fetchData = () => {
-    // Obvs this will need to be real, where params === photo.id
+    const arr = window.location.pathname.split('/');
+    const photoId = arr.reverse()[0];
+
     this.setState({
-      photoset: Photos[0],
+      photoset: Photos[photoId],
     });
   }
 
@@ -21,7 +22,7 @@ class PhotoPageContainer extends Component {
     const { photoset } = this.state;
     return (
       <div>
-        {photoset.completed &&
+        {photoset && photoset.completed &&
           <PhotoPage {...photoset} />}
       </div>
     );
