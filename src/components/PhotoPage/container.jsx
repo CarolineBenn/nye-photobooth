@@ -10,20 +10,27 @@ class PhotoPageContainer extends Component {
   }
 
   fetchData = () => {
-    const arr = window.location.pathname.split('/');
-    const photoId = arr.reverse()[0];
+    if (this.props.index) {
+      console.log('hey', this.props)
+      this.setState({
+        photoset: this.props.images,
+      })
+    } else {
+      const arr = window.location.pathname.split('/');
+      const photoId = arr.reverse()[0];
 
-    this.setState({
-      photoset: Photos[photoId],
-    });
+      this.setState({
+        photoset: Photos[photoId],
+      });
+    }
   }
 
   render() {
     const { photoset } = this.state;
+
     return (
       <div>
-        {photoset && photoset.completed &&
-          <PhotoPage {...photoset} />}
+        {photoset && <PhotoPage images={photoset} />}
       </div>
     );
   }
