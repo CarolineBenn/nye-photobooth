@@ -1,4 +1,4 @@
-const poses = [
+const Poses = [
   'Jazz flute',
   'Look left',
   'Angry bear',
@@ -12,4 +12,4 @@ const poses = [
   'Lick',
 ];
 
-export default poses;
+export default Poses;

@@ -1,0 +1,11 @@
+.Homepage-button {
+  background: #2f3c69;
+  color: white;
+  cursor: pointer;
+  padding: 2rem;
+  display: inline-block;
+}
+
+.Homepage-button:hover {
+  background: #1f2744;
+}

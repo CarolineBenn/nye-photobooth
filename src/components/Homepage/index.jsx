@@ -1,7 +1,2 @@
-import React from 'react';
-
-const Homepage = () => (
-  <div>Homepage</div>
-);
-
-export default Homepage;
+export { default as HomepageContainer } from './container';
+export { default as Homepage } from './component';
