@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import 'whatwg-fetch'
 
 import Poses from '../../data/poses';
@@ -59,8 +60,6 @@ class TakeAPhoto extends Component {
   showPosesPreview() {
     const { posesPreview } = this.state;
     const interval = setInterval(() => {
-      console.log(posesPreview)
-      console.log(posesPreview.length)
       let currentPose = posesPreview.shift();
 
       this.setState({
@@ -128,7 +127,7 @@ class TakeAPhoto extends Component {
   redirect() {
     // After X seconds, redirect to '/'.
     setTimeout(() => {
-      console.log('redirected');
+      this.props.history.push('/');
     }, TIME * 4);
   }
 
@@ -150,4 +149,4 @@ class TakeAPhoto extends Component {
     );
   }
 }
-export default TakeAPhoto;
+export default withRouter(TakeAPhoto);;
