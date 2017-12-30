@@ -18,7 +18,7 @@ const Photo = ({
       </filter>
     </svg>
 
-    {/*<img src={gif} alt="img" className="Photo-image" />*/}
+    <img src={`http://192.168.0.133:4567/${gif}`} alt="img" className="Photo-image" />
     <div className="Photo-pose">{pose}</div>
   </div>
 );

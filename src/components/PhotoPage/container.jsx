@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 
-import Photos from '../../data/photos';
-
 import { PhotoPage } from '.';
 
 class PhotoPageContainer extends Component {
-  componentWillMount() {
-    this.fetchData();
-  }
-
-  fetchData = () => {
-    const arr = window.location.pathname.split('/');
-    const photoId = arr.reverse()[0];
-
-    this.setState({
-      photoset: Photos[photoId],
-    });
+  constructor() {
+    super();
+    this.state = {
+      photoset: undefined,
+    };
   }
 
   render() {

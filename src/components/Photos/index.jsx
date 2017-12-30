@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
-import Photos from '../../data/photos';
+import 'whatwg-fetch'
 
 import { PhotoPageContainer } from '../PhotoPage';
 
-class PhotoList extends Component {
+class Photos extends Component {
   constructor() {
     super();
     this.state = {
@@ -20,11 +19,15 @@ class PhotoList extends Component {
     setInterval(() => this.selectPhoto(), 2000);
   }
 
-
   selectPhoto() {
-    this.setState({
-      photoset: Photos[Math.floor(Math.random() * Photos.length)],
-    });
+    fetch('http://192.168.0.133:4567/gallery')
+      .then((res) => {
+        res.json().then((data) => {
+          this.setState({
+            photoset: data[Math.floor(Math.random() * data.length)],
+          });
+        });
+      });
   }
 
   render() {
@@ -35,11 +38,11 @@ class PhotoList extends Component {
       {photoset &&
         <PhotoPageContainer
           index
-          images={photoset.images}
+          images={photoset.data}
         />}
       </div>
     );
   }
 }
 
-export default PhotoList;
+export default Photos;

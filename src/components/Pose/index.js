@@ -1,7 +1,9 @@
 import React from 'react';
 
-const Pose = ({ pose }) => (
-  <div>{pose}</div>
+import './styles.css';
+
+const Pose = ({ pose, preview }) => (
+  <div className={preview ? "Pose-pose" : ""}>{pose}</div>
 );
 
 export default Pose;
