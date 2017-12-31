@@ -6,17 +6,18 @@ import Poses from '../../data/poses';
 
 import Pose from '../Pose';
 
+import './styles.css';
+
 const TIME = 3000;
 
 class TakeAPhoto extends Component {
   constructor() {
     super();
     this.state = {
-      instruction: 'Ready?',
+      instruction: 'Welcome!',
       poses: undefined,
       posesPreview: undefined,
       preview: undefined,
-      finished: false,
     };
     this.setPoses = this.setPoses.bind(this);
     this.showPosesPreview = this.showPosesPreview.bind(this);
@@ -29,7 +30,7 @@ class TakeAPhoto extends Component {
     // Set timeout to show 'Ready? for 4 seconds'.
     setTimeout(() => {
       this.selectPoses();
-    }, TIME * 2);
+    }, TIME);
   }
 
   selectPoses() {
@@ -120,12 +121,8 @@ class TakeAPhoto extends Component {
       this.setState({
         currentPose: undefined,
         instruction: 'Sweet! All done. Keep an eye out for all your photos',
-      }, this.finish);
+      }, this.redirect);
     }, 2000)
-  }
-
-  finish() {
-    this.setState({ finished: true }, this.redirect);
   }
 
   redirect() {
@@ -144,11 +141,13 @@ class TakeAPhoto extends Component {
     } = this.state;
 
     return (
-      <div>
-        {instruction && <div>{instruction}</div>}
-        {preview && <div>{preview}</div>}
-        {currentPose && <div>{currentPose}</div>}
-        {finished && <div>FINSIHED</div>}
+      <div className="TakeAPhoto-container">
+        {instruction &&
+          <div>{instruction}</div>}
+        {preview &&
+          <div className="TakeAPhoto-preview">{preview}</div>}
+        {currentPose &&
+          <div className="TakeAPhoto-currentPose">{currentPose}</div>}
       </div>
     );
   }
