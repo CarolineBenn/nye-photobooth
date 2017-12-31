@@ -4,9 +4,14 @@
   /*align-items: center;*/
   justify-content: center;
   height: 100vh;
+  background-image: url('https://static1.squarespace.com/static/5176fdb5e4b083b631f31303/t/54f485ace4b0b0738be8cba6/1425311155924');
+
 }
 
 .App-main {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
 }

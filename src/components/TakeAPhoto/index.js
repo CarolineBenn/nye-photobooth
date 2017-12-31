@@ -65,7 +65,7 @@ class TakeAPhoto extends Component {
 
       this.setState({
         instruction: false,
-        preview: `${currentPose}-preview`,
+        preview: currentPose,
       });
       if (posesPreview.length === 0) {
         clearTimeout(interval);
@@ -99,7 +99,7 @@ class TakeAPhoto extends Component {
 
       this.setState({
         instruction: undefined,
-        currentPose: `${currentPose} - LIVe`,
+        currentPose: currentPose,
       });
 
 
@@ -122,7 +122,7 @@ class TakeAPhoto extends Component {
         currentPose: undefined,
         instruction: 'Sweet! All done. Keep an eye out for all your photos',
       }, this.redirect);
-    }, 2000)
+    }, TIME)
   }
 
   redirect() {

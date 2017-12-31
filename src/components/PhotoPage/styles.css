@@ -1,12 +1,11 @@
 .PhotoDetail-container {
   width: 500px;
-  /*margin: 1rem auto;*/
   background: #FFFFFC;
   display: flex;
   flex-wrap: wrap;
   border-radius: 4px;
   padding: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
 }
 
 .PhotoDetail-about {

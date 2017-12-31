@@ -1,5 +1,6 @@
 .Homepage-container {
   height: 100%;
+  width: 100%;
   background-image: url('../../images/discoball.gif');
   background-size: cover;
   background-position: center center;
@@ -10,6 +11,8 @@
 
 .Homepage-button {
   background: #2f3c69;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   color: white;
   cursor: pointer;
   padding: 2rem;

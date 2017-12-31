@@ -4,16 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: antiquewhite;
 
-.TakeAPhoto-ready {
-  color: red;
+  letter-spacing: 10px;
 }
 
 .TakeAPhoto-preview {
-  color: orange;
+  color: #fa3aab;
 }
 
 .TakeAPhoto-currentPose {
-  color: palegreen;
+  color: red;
 }
