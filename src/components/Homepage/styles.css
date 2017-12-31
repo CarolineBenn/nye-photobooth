@@ -1,3 +1,13 @@
+.Homepage-container {
+  height: 100%;
+  background-image: url('../../images/discoball.gif');
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .Homepage-button {
   background: #2f3c69;
   color: white;
