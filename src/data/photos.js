@@ -2,7 +2,7 @@ const Photos = [
   {
     id: 1,
     completed: true,
-    images: [
+    data: [
       {
         pose: 'Waving',
         gif: 'https://media2.giphy.com/media/Y8ocCgwtdj29O/giphy.gif',
@@ -44,7 +44,7 @@ const Photos = [
   {
     id: 2,
     completed: true,
-    images: [
+    data: [
       {
         pose: 'Angry',
         gif: 'https://media0.giphy.com/media/l0ExepbsmaZjH05yw/giphy.gif',
