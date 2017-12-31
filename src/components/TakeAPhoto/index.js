@@ -6,7 +6,7 @@ import Poses from '../../data/poses';
 
 import Pose from '../Pose';
 
-const TIME = 2000;
+const TIME = 3000;
 
 class TakeAPhoto extends Component {
   constructor() {
@@ -84,7 +84,7 @@ class TakeAPhoto extends Component {
   }
 
   takePics() {
-    setTimeout(() => this.takePhotos(), TIME * 2)
+    setTimeout(() => this.takePhotos(), TIME)
   }
 
   takePhotos() {
@@ -101,8 +101,12 @@ class TakeAPhoto extends Component {
         currentPose: `${currentPose} - LIVe`,
       });
 
-      // fetch(`http://192.168.0.133:4567/shutter/${dateNow}/${poseParams}`)
-        // .catch(err => console.log('err', err));
+
+      // Fetch occurs after one second in order to give users a chance to figure out the pose.
+      setTimeout(() => {
+        fetch(`http://192.168.0.133:4567/shutter/${dateNow}/${poseParams}`)
+          .catch(err => console.log('err', err));
+      }, TIME / 3);
 
       if (poses.length === 0) {
         clearTimeout(interval);

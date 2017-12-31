@@ -3,6 +3,8 @@ import 'whatwg-fetch'
 
 import { PhotoPageContainer } from '../PhotoPage';
 
+const TIME = 12000;
+
 class Photos extends Component {
   constructor() {
     super();
@@ -16,7 +18,7 @@ class Photos extends Component {
   }
 
   startPoll() {
-    setInterval(() => this.selectPhoto(), 2000);
+    setInterval(() => this.selectPhoto(), TIME);
   }
 
   selectPhoto() {
