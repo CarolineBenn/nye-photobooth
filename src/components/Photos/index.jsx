@@ -3,7 +3,7 @@ import 'whatwg-fetch'
 
 import { PhotoPageContainer } from '../PhotoPage';
 
-const TIME = 12000;
+const TIME = 30000;
 
 class Photos extends Component {
   constructor() {

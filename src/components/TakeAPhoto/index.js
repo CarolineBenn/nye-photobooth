@@ -8,7 +8,7 @@ import Pose from '../Pose';
 
 import './styles.css';
 
-const TIME = 3000;
+const TIME = 5000;
 
 class TakeAPhoto extends Component {
   constructor() {
@@ -110,8 +110,10 @@ class TakeAPhoto extends Component {
       }, TIME / 3);
 
       if (poses.length === 0) {
-        clearTimeout(interval);
-        this.getOutTheBooth();
+        setTimeout(() => {
+          clearTimeout(interval);
+          this.getOutTheBooth();
+        })
       }
     }, TIME);
   }
